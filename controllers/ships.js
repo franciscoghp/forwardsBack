@@ -87,7 +87,6 @@ const updateShip = async (req, res) => {
          departure_date,
          ship
     }
-    console.log(newData)
     connection.query('UPDATE ships set ? WHERE id = ?', [newData, id], (error, data)=>{
         if(data.length  === 0){
             res.json({
